@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.example.demo.mapper.CommentMapper">
+ 	<insert id="insert" parameterType="com.example.demo.entity.Comment">
+ 		insert into comment(comment_id,name,comment_dt,content,image_path,s_id) values 
+ 		(#{commentId},#{name},now(),#{content},#{imagePath},#{ssId})
+ 	</insert>
+ </mapper>
